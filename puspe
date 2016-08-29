@@ -1,0 +1,8 @@
+double[] outputArr = ann.compute(new BasicMLData(input.featureVect())).getData();
+Double[] intermediate = new Double[outputArr.length];
+for (int i=0; i<outputArr.length; i++) {
+    intermediate[i] = new Double(outputArr[i]);
+}
+List<Double> outputList = Arrays.asList(intermediate);
+KNN.respectiveSort(true,outputList,res);
+return res;
