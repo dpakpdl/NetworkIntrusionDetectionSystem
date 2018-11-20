@@ -2,6 +2,7 @@ from nltk.probability import FreqDist
 from sklearn.externals import joblib
 from nltk import classify
 from nltk.classify.naivebayes import NaiveBayesClassifier
+
 '''
 # open training dataset files
 try:
@@ -87,8 +88,8 @@ word_features = get_word_features(get_words_in_tweets(training))
 joblib.dump(word_features,'models/word_features_compressed.pkl',3)
 #print word_features
 '''
-training=joblib.load('models/training_compressed.pkl')
-word_features=joblib.load('models/word_features_compressed.pkl')
+training = joblib.load('models/training_compressed.pkl')
+word_features = joblib.load('models/word_features_compressed.pkl')
 
 """
     checks if the passed list of words
@@ -96,16 +97,19 @@ word_features=joblib.load('models/word_features_compressed.pkl')
     true if yes
     false if no
 """
+
+
 def extract_features(document):
     document_words = set(document)
     features = {}
-    global word_features	
+    global word_features
     for word in word_features:
         features['contains(%s)' % word] = (word in document_words)
     return features
 
-#print extract_features(training[0][0])
+
+# print extract_features(training[0][0])
 
 training_set = classify.apply_features(extract_features, training)
 classifier = NaiveBayesClassifier.train(training_set)
-joblib.dump(classifier, 'models/classifier_compressed.pkl',3)
+joblib.dump(classifier, 'models/classifier_compressed.pkl', 3)

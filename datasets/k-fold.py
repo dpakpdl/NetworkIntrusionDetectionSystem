@@ -3,15 +3,15 @@ k = input("Enter value of K: ")
 n = input("Enter n part for test set(quadrant) : ")
 
 # original datasets
-datasets = ("normalcombinedWords.txt", "anomalousTrafficTestWords.txt")
+DATA_SETS = ("normalcombinedWords.txt", "anomalousTrafficTestWords.txt")
 
-# f is original dataset iterator
-for input_file in datasets:
+# f is original data set iterator
+for input_file in DATA_SETS:
     with open(input_file, "r") as _set:
         # read content of dataset
         data = _set.read()
 
-        # ouput file names
+        # output file names
         test = open("testing/test_" + input_file, "w")
         train = open("training/train_" + input_file, "w")
 

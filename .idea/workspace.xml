@@ -2,42 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e934cc46-1aa8-4954-8d7b-13d3ac97581d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/models/classifier_compressed.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/models/training_compressed.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/models/word_features_compressed.pkl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/live_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-30__09_53_31.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-30__13_03_00.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-30__13_27_38.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-30__19_43_41.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-30__19_44_32.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-08-31__15_37_09.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-09-30__19_33_02.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-09-30__19_45_25.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-09-30__19_46_13.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__10_38_59.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__10_46_45.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__11_22_22.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__16_02_18.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__16_06_36.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__16_12_32.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-14__21_18_57.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2016-12-16__23_10_56.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-17__11_40_32.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-19__15_09_35.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-19__15_11_06.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-20__20_12_26.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-20__20_30_32.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/log-2018-11-20__20_33_51.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/test1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/test2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/test3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/logs/test4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gui/test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/NIDS-GUI" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accuracy.py" afterPath="$PROJECT_DIR$/accuracy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/k-fold.py" afterPath="$PROJECT_DIR$/datasets/k-fold.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/live_test.py" afterPath="$PROJECT_DIR$/live_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scap.py" afterPath="$PROJECT_DIR$/scap.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model_classifier.py" afterPath="$PROJECT_DIR$/model_classifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_classfier.py" afterPath="$PROJECT_DIR$/test_classfier.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,12 +17,58 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="live_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="live_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui/live_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="-81">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#17#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accuracy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accuracy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="k-fold.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datasets/k-fold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_classfier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_classfier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_classifier.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model_classifier.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +89,10 @@
       <list>
         <option value="$PROJECT_DIR$/NIDS-GUI/test.py" />
         <option value="$PROJECT_DIR$/NIDS-GUI/live_test.py" />
+        <option value="$PROJECT_DIR$/model_classifier.py" />
         <option value="$PROJECT_DIR$/datasets/k-fold.py" />
+        <option value="$PROJECT_DIR$/test_classfier.py" />
+        <option value="$PROJECT_DIR$/accuracy.py" />
       </list>
     </option>
   </component>
@@ -122,7 +139,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkIntrusionDetectionSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkIntrusionDetectionSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkIntrusionDetectionSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetworkIntrusionDetectionSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datasets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,8 +274,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="-4" width="1315" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -286,18 +332,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_classfier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/datasets/k-fold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="-136">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gui/live_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-81">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accuracy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
