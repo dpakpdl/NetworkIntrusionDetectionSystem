@@ -7,7 +7,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 
-def openfiles(filename):
+def open_files(filename):
     # Read new file
     with open(filename) as f:
         line = []
@@ -38,17 +38,17 @@ class TreeViewFilterWindow(Gtk.Window):
         self.add(self.grid)
 
         # Creating the ListStore model
-        self.software_liststore = Gtk.ListStore(str, str, str, str, str, str, str)
+        self.software_list_store = Gtk.ListStore(str, str, str, str, str, str, str)
 
         self.current_filter_language = None
 
-        # Creating the filter, feeding it with the liststore model
-        self.language_filter = self.software_liststore.filter_new()
+        # Creating the filter, feeding it with the list store model
+        self.language_filter = self.software_list_store.filter_new()
         # setting the filter function, note that we're not using the
         self.language_filter.set_visible_func(self.language_filter_func)
 
-        # creating the treeview, making it use the filter as a model, and adding the columns
-        self.treeview = Gtk.TreeView.new_with_model(self.language_filter)
+        # creating the tree view, making it use the filter as a model, and adding the columns
+        self.tree_view = Gtk.TreeView.new_with_model(self.language_filter)
         for i, column_title in enumerate(["MAC Addr", "IP Addr",
                                           "User Agent", "Payload", "Label"]):
             renderer = Gtk.CellRendererText()
@@ -58,7 +58,7 @@ class TreeViewFilterWindow(Gtk.Window):
             column.set_expand(False)
             column.set_fixed_width(150)
             column.set_min_width(50)
-            self.treeview.append_column(column)
+            self.tree_view.append_column(column)
 
         self.buttons = list()
         # test
@@ -69,21 +69,21 @@ class TreeViewFilterWindow(Gtk.Window):
         self.buttons.append(open_button)
         open_button.connect("clicked", self.open_log)
         # creating buttons to filter by programming language, and setting up their events
-        for prog_language in ["anomalous", "normal", "all"]:
-            button = Gtk.Button(prog_language)
+        for classified_data in ["anomalous", "normal", "all"]:
+            button = Gtk.Button(classified_data)
             self.buttons.append(button)
             button.connect("clicked", self.on_selection_button_clicked)
 
-        # setting up the layout, putting the treeview in a scrollwindow, and the buttons in a row
-        self.scrollable_treelist = Gtk.ScrolledWindow()
-        self.scrollable_treelist.set_vexpand(True)
-        self.grid.attach(self.scrollable_treelist, 0, 0, 8, 10)
-        self.grid.attach_next_to(self.buttons[0], self.scrollable_treelist,
+        # setting up the layout, putting the tree view in a scroll window, and the buttons in a row
+        self.scrollable_tree_list = Gtk.ScrolledWindow()
+        self.scrollable_tree_list.set_vexpand(True)
+        self.grid.attach(self.scrollable_tree_list, 0, 0, 8, 10)
+        self.grid.attach_next_to(self.buttons[0], self.scrollable_tree_list,
                                  Gtk.PositionType.BOTTOM, 1, 1)
         for i, button in enumerate(self.buttons[1:]):
             self.grid.attach_next_to(button, self.buttons[i],
                                      Gtk.PositionType.RIGHT, 1, 1)
-        self.scrollable_treelist.add(self.treeview)
+        self.scrollable_tree_list.add(self.tree_view)
 
         self.show_all()
         self.builder = []
@@ -113,10 +113,10 @@ class TreeViewFilterWindow(Gtk.Window):
         if response == Gtk.ResponseType.OK:
             print("Open clicked")
             print("File selected: " + dialog.get_filename())
-            software_list = openfiles(dialog.get_filename())
-            self.software_liststore.clear()
+            software_list = open_files(dialog.get_filename())
+            self.software_list_store.clear()
             for software_ref in software_list:
-                self.software_liststore.insert(0, list(software_ref))
+                self.software_list_store.insert(0, list(software_ref))
         elif response == Gtk.ResponseType.CANCEL:
             print("Cancel clicked")
 
@@ -132,7 +132,7 @@ class TreeViewFilterWindow(Gtk.Window):
             else:
                 blah.append('white')
                 blah.append('red')
-            self.software_liststore.insert(0, blah)
+            self.software_list_store.insert(0, blah)
             self.builder = []
 
     def start_run(self, widget):

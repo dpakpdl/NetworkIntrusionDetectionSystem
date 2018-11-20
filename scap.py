@@ -49,7 +49,7 @@ def filter_payload(load):
             value = i[p + 1:]
             # provide numerical value to content-type
             if key == 'Content-Type':
-                # EVAL CONverts string to preexisting variable name
+                # EVAL converts string to preexisting variable name
                 OBTAINED_PAYLOAD[key] = str(eval(search(key)).index(value) + 1)
             elif key == 'Host':
                 OBTAINED_PAYLOAD[key] = str(randint(0, 9))
@@ -69,7 +69,6 @@ def filter_payload(load):
                     return ""
             else:
                 OBTAINED_PAYLOAD['Payload'] = OBTAINED_PAYLOAD['Content-Length']
-                # print dictionary.values()
     # writing data in file
     for k, v in OBTAINED_PAYLOAD.items():
         input_file.flush()

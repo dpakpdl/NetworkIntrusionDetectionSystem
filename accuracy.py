@@ -46,7 +46,6 @@ except Exception as e:
     print e
 
 # classify normal test dataset
-
 for piece in read_in_chunks(normal_dataset):
     piece = piece.lower()
     lines = piece.split('\n')

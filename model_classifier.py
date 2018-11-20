@@ -91,13 +91,6 @@ joblib.dump(word_features,'models/word_features_compressed.pkl',3)
 training = joblib.load('models/training_compressed.pkl')
 word_features = joblib.load('models/word_features_compressed.pkl')
 
-"""
-    checks if the passed list of words
-    is contained in the list 'word_features'
-    true if yes
-    false if no
-"""
-
 
 def extract_features(document):
     document_words = set(document)
