@@ -1,0 +1,50 @@
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/phps/signIn.php?email=agraharimka@gmail.com&password=jnajk 
+normal
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/phps/signIn.php?email=agraharimka@gmail.com&password=jnajk 
+normal
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/phps/signIn.php?email=agraharimka@gmail.com&password=select+*+from+table+dro+p+table 
+anomalous
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/phps/signIn.php?email=agraharimka@gmail.com&password=select+*+from+table+dro+p+table 
+anomalous
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php data[wp-refresh-post-nonces][post_id]=7&interval=60&_nonce=bd88a885a5&action=heartbeat&screen_id=page&has_focus=false
+normal
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php data[wp-refresh-post-nonces][post_id]=7&interval=60&_nonce=bd88a885a5&action=heartbeat&screen_id=page&has_focus=false
+normal
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php data[wp-refresh-post-nonces][post_id]=7&interval=60&_nonce=bd88a885a5&action=heartbeat&screen_id=page&has_focus=false
+normal00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php data[wp-refresh-post-nonces][post_id]=7&interval=60&_nonce=bd88a885a5&action=heartbeat&screen_id=page&has_focus=false
+normal
+
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php action=wp-remove-post-lock&_wpnonce=c1f33825da&post_ID=7&active_post_lock=1472529571:1
+normal
+00:00:00:00:00:00
+127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0
+/wordpress/wp-admin/admin-ajax.php action=wp-remove-post-lock&_wpnonce=c1f33825da&post_ID=7&active_post_lock=1472529571:1
+normal
