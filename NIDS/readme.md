@@ -12,7 +12,7 @@ It is an web-based attack detection system using the CSIC 2010 HTTP datatsets. W
 	3) model_classfier.py Used to build models from datasets for Bayes model after using k-fold.py
 	4) test_classifer.py Used to test models offline.
 
-gui : It is basically  live_test.py running using graphical interface.
+* gui : It is basically  live_test.py running using graphical interface.
 
 ## Requirements
 1) Python 2
