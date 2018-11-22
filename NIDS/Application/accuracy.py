@@ -10,10 +10,10 @@ classifier = joblib.load('models/classifier_compressed.pkl')
 word_features = joblib.load('models/word_features_compressed.pkl')
 
 def extract_features(document):
- """
-    checks if the passed list of words
-    is contained in the list 'word_features'
-"""
+    """
+        checks if the passed list of words
+        is contained in the list 'word_features'
+    """
     document_words = set(document)
     features = {}
     global word_features	
@@ -24,9 +24,9 @@ def extract_features(document):
 
 
 def read_in_chunks(file_object, chunk_size=1024):
-"""
-    Reading files in chucks of 1KB each
-"""  
+    """
+        Reading files in chucks of 1KB each
+    """  
     while True:
         data = file_object.read(chunk_size)
         if not data:

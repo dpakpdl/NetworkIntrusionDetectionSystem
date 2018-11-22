@@ -51,7 +51,7 @@ def filter(load):
             for k in attributes:
                 if k not in dictionary:
                     dictionary[k]=str('0')
-           # calculation of Payload
+            # calculation of Payload
             if dictionary['Method']=='0':
                 try:
                     start=load.index('?')

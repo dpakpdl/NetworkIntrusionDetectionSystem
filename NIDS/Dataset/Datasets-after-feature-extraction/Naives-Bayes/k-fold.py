@@ -3,7 +3,7 @@ k = input("Enter value of K: ")
 n = input("Enter n part for test set(quadrant) : ")
 
 # original datasets
-datasets=("normalcombinedWords.txt","anomalousTrafficTestWords.txt")
+datasets=("normalCombinedWords.txt","anomalousWords.txt")
 
 # f is original dataset iterator
 for f in datasets:
