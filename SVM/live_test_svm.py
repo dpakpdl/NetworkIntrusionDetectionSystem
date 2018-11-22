@@ -99,6 +99,7 @@ def parent():
         if os.fork() == 0:
             child(pipeout)
         else:
+            data = np.asarray([])
             while True:
                 verse = os.read(pipein, 500)
                 verse1 = verse.split('a')
@@ -109,9 +110,12 @@ def parent():
                         k = list(map(int, data1))
                         res.append(k)
                 if len(res) > 1:
-                    data = np.asarray(res)
+                    data_new = np.asarray(res)
                 else:
-                    data = np.asarray([[1, 237, 1, 237, 1]] + res)
+                    data_new = np.asarray([[1, 237, 1, 237, 1]] + res)
+                if all(data==data_new):
+                    continue
+                data = data_new
                 live_data = mat(log10(data[:, :5]))
                 try:
                     features_live = principal_component_analysis(live_data, 2)
@@ -119,9 +123,9 @@ def parent():
                     continue
 
                 classifier = joblib.load('trained_data/clf.pkl')
-                preds_live = classifier.predict(features_live)
+                prediction = classifier.predict(features_live)
                 result = list()
-                for i in preds_live:
+                for i in prediction:
                     result.append(i)
                 anomalous = True if 1 in result else False
                 if anomalous:
