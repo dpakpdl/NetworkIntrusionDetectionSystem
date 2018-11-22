@@ -14,12 +14,12 @@ word_features = joblib.load('models/word_features_compressed.pkl')
 
 
 def extract_features(document):
-"""
-    checks if the passed list of words
-    is contained in the list 'word_features'
-    true if yes
-    false if no
-"""
+    """
+        checks if the passed list of words
+        is contained in the list 'word_features'
+        true if yes
+        false if no
+    """
     document_words = set(document)
     features = {}
     global word_features	
@@ -29,22 +29,22 @@ def extract_features(document):
 
 
 def find_Useragent(load,value,n=3):
-"""
-    find string between User-agent and third raw string raw newline
-"""
+    """
+        find string between User-agent and third raw string raw newline
+    """
     start = load.find(value)
     while start >= 0 and n > 1:
         start = load.find(value, start+1)
         n -= 1
     return start
 
-#check if it a valid http reuest
 def isHttp(packet):
+    #check if it a valid http request
     packet = str(packet)
     return "HTTP" in packet and any(i in packet for i in methods)
 
-#use of regular expression to break http load
 def nthofchar(s, c, n):
+    # use of regular expression to break http load
     regex=r'^((?:[^%s]*%s){%d}[^%s]*)%s(.*)' % (c,c,n-1,c,c)
     l = ()
     m = re.match(regex, s)
@@ -62,8 +62,10 @@ moment=time.strftime("%Y-%b-%d__%H_%M_%S",time.localtime())
 f = open('logs/log-'+moment+'.txt', 'w')
 
 def classify(load,mac_src,ip_src):
-   # Classify the live http header payloads
-   # finding User-Agent
+    """
+    Classify the live http header payloads
+    finding User-Agent
+    """
     try:
         srt=load.index('User-Agent:')
     except ValueError:
@@ -103,7 +105,7 @@ def classify(load,mac_src,ip_src):
             pass
 	
 def pfunc(packet):
-#pass the request of it valid http header
+    #pass the request of it valid http header
     if isHttp(packet):
         if IP in packet:
             ip_src=packet[IP].src

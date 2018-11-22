@@ -7,12 +7,10 @@ word_features = joblib.load('models/word_features_compressed.pkl')
 
 
 def extract_features(document):
-"""
-    checks if the passed list of words
-    is contained in the list 'word_features'
-    true if yes
-    false if no
-"""
+    """
+        checks if the passed list of words
+        is contained in the list 'word_features'
+    """
     document_words = set(document)
     features = {}
     global word_features	

@@ -5,16 +5,16 @@ from nltk.classify.naivebayes import NaiveBayesClassifier
 
 # open training dataset files
 try:
-    ano = open('../Dataset/Datasets-after-feature-extraction/Naives-Bayes/training/train_anomalousTrafficTestWords.txt')
-    nor = open('../Dataset/Datasets-after-feature-extraction/Naives-Bayes/training/train_normalcombinedWords.txt')
+    ano = open('../Dataset/Datasets-after-feature-extraction/Naives-Bayes/training/train_anomalousWords.txt')
+    nor = open('../Dataset/Datasets-after-feature-extraction/Naives-Bayes/training/train_normalCombinedWords.txt')
 except Exception as e:
     print e
 
 
 def read_in_chunks(file_object, chunk_size=1024):
-"""
-    Reading files in chucks of 1KB each
-"""
+    """
+        Reading files in chucks of 1KB each
+    """
     while True:
         data = file_object.read(chunk_size)
         if not data:
@@ -56,10 +56,10 @@ for piece in read_in_chunks(nor):
 joblib.dump(training,'models/training_compressed.pkl',3)
 
 def get_words_in_tweets(training):
-"""
-    makes single list of words from training
-    single list of all the http header payload
-"""
+    """
+        makes single list of words from training
+        single list of all the http header payload
+    """
     all_words = []
     for (words, sentiment) in training:
       all_words.extend(words)
@@ -67,12 +67,12 @@ def get_words_in_tweets(training):
     return all_words
 
 def get_word_features(wordlist):
-"""
-    gives the frequency count of
-    each word from the dataset
-    But, here we return only the keys
-    i.e. only the word non-repeating words
-"""
+    """
+        gives the frequency count of
+        each word from the dataset
+        But, here we return only the keys
+        i.e. only the word non-repeating words
+    """
     wordlist = FreqDist(wordlist)
     #print wordlist.keys(),"------->",wordlist.values()
     return wordlist.keys()
@@ -88,10 +88,10 @@ word_features=joblib.load('models/word_features_compressed.pkl')
 
 
 def extract_features(document):
-"""
-    checks if the passed list of words
-    is contained in the list 'word_features'
-"""
+    """
+        checks if the passed list of words
+        is contained in the list 'word_features'
+    """
     document_words = set(document)
     features = {}
     global word_features	

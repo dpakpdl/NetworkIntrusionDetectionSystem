@@ -19,9 +19,8 @@ dictionary = {}
 #file to store data offline
 f = open('onlinedata', 'w')
 
-
-#return index KEY for words in dictionary
 def search(searchFor):
+    # return index KEY for words in dictionary
     for k in features:
         for v in features[k]:
             if searchFor in v:
