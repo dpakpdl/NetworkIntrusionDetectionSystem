@@ -118,7 +118,7 @@ def parent():
                 except:
                     continue
 
-                classifier = joblib.load('/trained_data/clf.pkl')
+                classifier = joblib.load('trained_data/clf.pkl')
                 preds_live = classifier.predict(features_live)
                 result = list()
                 for i in preds_live:
