@@ -40,16 +40,18 @@ var_y_slow = [features_train[ii][0] for ii in range(0, len(features_train)) if l
 var_x_slow = [features_train[ii][1] for ii in range(0, len(features_train)) if labels_train[ii] == 1]
 
 from sklearn import svm
-
+from sklearn.model_selection import cross_val_score
 ### create classifier
-# clf = svm.SVC(C=1000, gamma = 0.4)#TODO
-clf = joblib.load('/home/deepak/Major/SVM/trained_data/clf.pkl')
+clf = svm.SVC(C=1000, gamma=0.4)#TODO
+scores = cross_val_score(clf, iris.data, iris.target, cv=5)
+
+# clf = joblib.load('/home/deepak/Major/SVM/trained_data/clf.pkl')
 
 ### fit the classifier on the training features and labels
-clf.fit(features_train, labels_train)  # TODO
+# clf.fit(features_train, labels_train)  # TODO
 
 ### use the trained classifier to predict labels for the test features
-pred = clf.predict(features_test)  # TODO
+# pred = clf.predict(features_test)  # TODO
 
 ### calculate and return the accuracy on the test data
 ### this is slightly different than the example, 
